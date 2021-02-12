@@ -1,9 +1,9 @@
 // Import React
 import React from 'react';
-import {View, Text, Alert, StyleSheet,Image,TouchableOpacity} from 'react-native';
+import { View, Text, Alert, StyleSheet, Image, TouchableOpacity } from 'react-native';
 // Import Navigators from React Navigation
-import {createStackNavigator} from '@react-navigation/stack';
-import {createDrawerNavigator} from '@react-navigation/drawer';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 // Import Screens
 import Home from '../Drawer/Home';
@@ -11,21 +11,24 @@ import About from '../Drawer/About';
 import Profile from '../Drawer/Profile';
 import Contact from '../Drawer/Contact';
 import Settings from '../Drawer/Settings';
-import CustomSidebarMenu from '../../components/CustomSidebarMenu';
-import NavigationDrawerHeader from '../../components/NavigationDrawerHeader';
+import CustomSidebarMenu from '../../components/SidebarMenu/CustomSidebarMenu';
+import NavigationDrawerHeader from '../../components/DrawerHeader/NavigationDrawerHeader';
+import { images } from '../../themes';
+import { drawerRoutesstyle } from '../../styles';
+import { colors, strings } from '../../themes';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
-const HomeScreenStack = ({navigation}) => {
+const HomeScreenStack = ({ navigation }) => {
   return (
-    <Stack.Navigator initialRouteName="Home" screenOptions={{headerStyle: {backgroundColor: '#ba68c8'}}}>
+    <Stack.Navigator initialRouteName="Home" screenOptions={{ headerStyle: { backgroundColor: colors.headerstylebgColor }}}>
       <Stack.Screen
         name="Home"
         component={Home}
         options={{
-          headerTintColor: '#ffffff',
-          title: 'Home', //Set Header Title
+          headerTintColor: colors.drawerheaderTintColor,
+          title: strings.homeTitle, //Set Header Title
           headerLeft: () => (
             <NavigationDrawerHeader navigationProps={navigation} />
           )
@@ -35,7 +38,7 @@ const HomeScreenStack = ({navigation}) => {
   );
 };
 
-const AboutScreenStack = ({navigation}) => {
+const AboutScreenStack = ({ navigation }) => {
   return (
     <Stack.Navigator
       initialRouteName="About"
@@ -43,14 +46,14 @@ const AboutScreenStack = ({navigation}) => {
         headerLeft: () => (
           <NavigationDrawerHeader navigationProps={navigation} />
         ),
-        headerStyle: {backgroundColor: '#ba68c8'}
+        headerStyle: { backgroundColor: colors.headerstylebgColor }
       }}>
       <Stack.Screen
         name="About"
         component={About}
         options={{
-          headerTintColor: '#ffffff',
-          title: 'About', //Set Header Title
+          headerTintColor: colors.drawerheaderTintColor,
+          title: strings.aboutTitle, //Set Header Title
         }}
       />
     </Stack.Navigator>
@@ -58,7 +61,7 @@ const AboutScreenStack = ({navigation}) => {
 };
 
 
-const ProfileScreenStack = ({navigation}) => {
+const ProfileScreenStack = ({ navigation }) => {
   return (
     <Stack.Navigator
       initialRouteName="Profile"
@@ -66,22 +69,22 @@ const ProfileScreenStack = ({navigation}) => {
         headerLeft: () => (
           <NavigationDrawerHeader navigationProps={navigation} />
         ),
-        headerStyle: {backgroundColor: '#ba68c8'}
-        
+        headerStyle: { backgroundColor: colors.headerstylebgColor }
+
       }}>
       <Stack.Screen
         name="Profile"
         component={Profile}
         options={{
-          headerTintColor: '#ffffff',
-          title: 'Profile', //Set Header Title
+          headerTintColor: colors.drawerheaderTintColor,
+          title: strings.profileTitle, //Set Header Title
         }}
       />
     </Stack.Navigator>
   );
 };
 
-const SettingScreenStack = ({navigation}) => {
+const SettingScreenStack = ({ navigation }) => {
   return (
     <Stack.Navigator
       initialRouteName="Settings"
@@ -89,15 +92,15 @@ const SettingScreenStack = ({navigation}) => {
         headerLeft: () => (
           <NavigationDrawerHeader navigationProps={navigation} />
         ),
-        headerStyle: {backgroundColor: '#ba68c8'}
-       
+        headerStyle: { backgroundColor: colors.headerstylebgColor }
+
       }}>
       <Stack.Screen
         name="Settings"
         component={Settings}
         options={{
-          headerTintColor: '#ffffff',
-          title: 'Settings', //Set Header Title
+          headerTintColor: colors.drawerheaderTintColor,
+          title: strings.settingTitle, //Set Header Title
         }}
       />
     </Stack.Navigator>
@@ -106,7 +109,7 @@ const SettingScreenStack = ({navigation}) => {
 
 
 
-const ContactScreenStack = ({navigation}) => {
+const ContactScreenStack = ({ navigation }) => {
   return (
     <Stack.Navigator
       initialRouteName="Contact"
@@ -114,23 +117,20 @@ const ContactScreenStack = ({navigation}) => {
         headerLeft: () => (
           <NavigationDrawerHeader navigationProps={navigation} />
         ),
-        headerStyle: {backgroundColor: '#ba68c8'}
-       
+        headerStyle: { backgroundColor: colors.headerstylebgColor }
+
       }}>
       <Stack.Screen
         name="Contact"
         component={Contact}
         options={{
-          headerTintColor: '#ffffff',
-          title: 'Contact', //Set Header Title
+          headerTintColor: colors.drawerheaderTintColor,
+          title: strings.contactTitle, //Set Header Title
         }}
       />
     </Stack.Navigator>
   );
 };
-
-
-
 
 
 
@@ -139,85 +139,96 @@ const DrawerNavigatorRoutes = (props) => {
     <Drawer.Navigator
       drawerContentOptions={{
         //activeTintColor: '#cee1f2',
-        activeTintColor: '#ba68c8',
-        inactiveTintColor: 'gray',
-        color: '#ba68c8',
-        itemStyle: {marginVertical: 5, color: 'white'},
+        activeTintColor: colors.draweractiveTintColor,
+        inactiveTintColor: colors.drawerinactiveTintColor,
+        color: colors.drawertxtColor,
+        itemStyle: { marginVertical: 5, color: colors.draweritemStyle },
         labelStyle: {
-         // color: '#d8d8d8',
-         color: '#ba68c8',
+          // color: '#d8d8d8',
+          color: colors.drawerlabelStyle,
         },
       }}
-      screenOptions={{headerShown: false}}
+      screenOptions={{ headerShown: false }}
       drawerContent={CustomSidebarMenu}>
 
       <Drawer.Screen
         name="Home"
-        options={{drawerLabel: 'Home',
-        drawerIcon: ({ tintColor }) => (
+        options={{
+          drawerLabel: strings.homeTitle,
+          drawerIcon: ({ tintColor }) => (
 
-          <Image
-              source={require('../../assets/images/sideMenu/home.png')}
+            <Image
+              source={images.homeslidemenu}
               resizeMode="contain"
-              style={{ width: 20, height: 20, tintColor: tintColor }}
-          />
-         )}}
+              // style={{ width: 20, height: 20, tintColor: tintColor }}
+              style={drawerRoutesstyle.drawerimg}
+            />
+          )
+        }}
         component={HomeScreenStack}
-       />
+      />
 
-        <Drawer.Screen
+      <Drawer.Screen
         name="AboutScreenStack"
-        options={{drawerLabel: 'About',
-        drawerIcon: ({ tintColor }) => (
+        options={{
+          drawerLabel: strings.aboutTitle,
+          drawerIcon: ({ tintColor }) => (
 
-          <Image
-              source={require('../../assets/images/sideMenu/about.png')}
+            <Image
+              source={images.aboutslidemenu}
               resizeMode="contain"
-              style={{ width: 20, height: 20, tintColor: tintColor }}
-          />
-         ) }}
+              style={drawerRoutesstyle.drawerimg}
+            />
+          )
+        }}
         component={AboutScreenStack}
-        />
+      />
 
       <Drawer.Screen
         name="ProfileScreenStack"
-        options={{drawerLabel: 'Profile',
-        drawerIcon: ({ tintColor }) => (
+        options={{
+          drawerLabel: strings.profileTitle,
+          drawerIcon: ({ tintColor }) => (
 
-          <Image
-              source={require('../../assets/images/sideMenu/profile.png')}
+            <Image
+              source={images.profileslidemenu}
               resizeMode="contain"
-              style={{ width: 20, height: 20, tintColor: tintColor }}
-          />
-         ) }}
+              style={drawerRoutesstyle.drawerimg}
+            />
+          )
+        }}
         component={ProfileScreenStack}
       />
 
-     
+
       <Drawer.Screen
         name="SettingScreenStack"
-        options={{drawerLabel: 'Settings', drawerIcon: ({ tintColor }) => (
+        options={{
+          drawerLabel: strings.settingTitle, drawerIcon: ({ tintColor }) => (
 
-          <Image
-              source={require('../../assets/images/sideMenu/settings.png')}
+            <Image
+              source={images.settingsslidemenu}
               resizeMode="contain"
-              style={{ width: 20, height: 20, tintColor: tintColor }}
-          />
-         ) }}
+              style={drawerRoutesstyle.drawerimg}
+            />
+          )
+        }}
         component={SettingScreenStack}
       />
 
 
-    <Drawer.Screen
+      <Drawer.Screen
         name="ContactScreenStack"
-        options={{drawerLabel: 'Contact', drawerIcon: ({ tintColor }) => (
+        options={{
+          drawerLabel: strings.contactTitle, drawerIcon: ({ tintColor }) => (
 
-          <Image
-              source={require('../../assets/images/sideMenu/contact.png')}
+            <Image
+              source={images.contactslidemenu}
               resizeMode="contain"
-              style={{ width: 20, height: 20, tintColor: tintColor }}
-          />
-         ) }}
+              style={drawerRoutesstyle.drawerimg}
+            />
+          )
+        }}
         component={ContactScreenStack}
       />
     </Drawer.Navigator>

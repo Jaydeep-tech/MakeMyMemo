@@ -1,63 +1,36 @@
 // Import React and Component
-import React,{useState} from 'react';
-import {View, Text, SafeAreaView,StyleSheet,Image,ScrollView,TouchableOpacity} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, SafeAreaView, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
 import Swiper from 'react-native-swiper';
+import { images } from '../../themes';
+import { homestyle } from '../../styles';
 
 const Home = () => {
   return (
-    <View style={styles.container}>
-      <View style={styles.sliderContainer}>
+    <View style={homestyle.container}>
+      <View style={homestyle.sliderContainer}>
         {/* <Swiper autoplay horizontal={false} height={200} activeDotColor="#ffff" style={styles.wrapper} showsButtons={true}> Vertical Slider */}
-        <Swiper autoplay  activeDotColor="#ffff" style={styles.wrapper} showsButtons={true}>
-          <View style={styles.slide}>
-            <Image style={styles.sliderImage} source={require('../../assets/images/Slider/1.jpg')} resizeMode="cover" />
+        <Swiper autoplay activeDotColor="#ffff" style={homestyle.wrapper} showsButtons={true}>
+          <View style={homestyle.slide}>
+            <Image style={homestyle.sliderImage} source={images.slider1} resizeMode="cover" />
           </View>
-          <View style={styles.slide}>
-            <Image style={styles.sliderImage} source={require('../../assets/images/Slider/2.jpg')} resizeMode="cover" />
+          <View style={homestyle.slide}>
+            <Image style={homestyle.sliderImage} source={images.slider2} resizeMode="cover" />
           </View>
-          <View style={styles.slide}>
-            <Image  style={styles.sliderImage} source={require('../../assets/images/Slider/3.jpg')} resizeMode="cover" />
+          <View style={homestyle.slide}>
+            <Image style={homestyle.sliderImage} source={images.slider3} resizeMode="cover" />
           </View>
-          <View style={styles.slide}>
-            <Image  style={styles.sliderImage} source={require('../../assets/images/Slider/4.jpg')} resizeMode="cover" />
+          <View style={homestyle.slide}>
+            <Image style={homestyle.sliderImage} source={images.slider4} resizeMode="cover" />
           </View>
-          <View style={styles.slide}>
-            <Image  style={styles.sliderImage} source={require('../../assets/images/Slider/5.jpg')} resizeMode="cover" />
+          <View style={homestyle.slide}>
+            <Image style={homestyle.sliderImage} source={images.slider5} resizeMode="cover" />
           </View>
         </Swiper>
-        </View>
-
+      </View>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-  },
-  sliderContainer:{
-    height:215,
-    width:'95%',
-    marginTop:10,
-    justifyContent: 'center',
-    alignSelf:'center',
-    borderRadius: 10,
-  },
-  wrapper: {},
-  slide:{
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: 'transparent',
-    borderRadius: 10,
-  },
-  sliderImage:{
-    height:'100%',
-    width:'100%',
-    alignSelf:'center',
-    borderRadius: 10,
-  }
-})
 
 export default Home;
 

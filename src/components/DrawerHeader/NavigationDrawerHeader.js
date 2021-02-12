@@ -1,6 +1,8 @@
 // Import React and Component
 import React from 'react';
 import {View, Image, TouchableOpacity} from 'react-native';
+import {images} from '../../themes'
+import {navigationDrawerstyle} from '../../styles';
 
 const NavigationDrawerHeader = (props) => {
   const toggleDrawer = () => {
@@ -8,11 +10,11 @@ const NavigationDrawerHeader = (props) => {
   };
 
   return (
-    <View style={{flexDirection: 'row'}}>
+    <View style={navigationDrawerstyle.navraw}>
       <TouchableOpacity onPress={toggleDrawer}>
         <Image 
-          source={require('../assets/images/general/drawerLogo/menu.png')}
-          style={{width: 25, height: 25, marginLeft: 10}}
+          source={images.drawermenu}
+          style={navigationDrawerstyle.naviagationdrawerimg}
         />
       </TouchableOpacity>
     </View>

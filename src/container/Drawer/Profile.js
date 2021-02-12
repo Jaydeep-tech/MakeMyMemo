@@ -1,23 +1,16 @@
 // Import React and Component
 import React from 'react';
-import {View, Text, SafeAreaView,StyleSheet} from 'react-native';
-
+import {View, Text, SafeAreaView} from 'react-native';
+import { profilestyle } from '../../styles';
 const Profile = () => {
   return (
-    <SafeAreaView style={{flex: 1}}>
-       <View style={styles.container}>
+    <SafeAreaView style={profilestyle.safeArea}>
+       <View style={profilestyle.container}>
         
         </View>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-  }
-});
 
 
 export default Profile;
