@@ -6,7 +6,7 @@ export const homestyle = StyleSheet.create({
     
     container: {
         flex: 1,
-        backgroundColor: 'white',
+        backgroundColor: colors.homebgColors,
       },
       sliderContainer: {
         height: moderateScale(215),
@@ -20,7 +20,7 @@ export const homestyle = StyleSheet.create({
       slide: {
         flex: 1,
         justifyContent: 'center',
-        backgroundColor: 'transparent',
+        backgroundColor: colors.homeslidebgColors,
         borderRadius: moderateScale(10),
       },
       sliderImage: {

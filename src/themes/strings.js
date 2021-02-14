@@ -99,7 +99,7 @@ export default AppString = {
   profileTitle:"Profile",
   settingTitle:"Settings",
   contactTitle:"Contact",
-
+  customerDetailsTitle:"My Details"
 
 
 };

@@ -5,7 +5,9 @@ import { moderateScale } from '../../themes/styleConfig';
 export const templatestyle = StyleSheet.create({
     
     container: {
-        flex: 1
+        flex: 1,
+        //backgroundColor: 'transparent',
+        backgroundColor: colors.templatescontainerbgcolors,
       },
       cardsWrapper: {
         //marginTop:20,
@@ -16,7 +18,7 @@ export const templatestyle = StyleSheet.create({
         height: moderateScale(120),
         marginVertical: moderateScale(10),
         flexDirection: 'row',
-        shadowColor: '#999',
+        shadowColor: colors.templateshadowcardcolors,
         shadowOffset: { width: moderateScale(0), height: moderateScale(1) },
         shadowOpacity: 0.8,
         shadowRadius: 2,
@@ -36,25 +38,25 @@ export const templatestyle = StyleSheet.create({
       cardInfo: {
         flex: 2,
         padding: 10,
-        borderColor: '#ccc',
+        borderColor: colors.templatescardInfobordercolors,
         borderWidth: 1,
         borderLeftWidth: 0,
         borderBottomRightRadius: 8,
         borderTopRightRadius: 8,
-        backgroundColor: '#fff',
+        backgroundColor: colors.templatescardInfobgcolors,
     
       },
       cardView: {
         flex: 1,
         padding: moderateScale(0),
-        borderColor: '#ccc',
+        borderColor: colors.templatescardViewbordercolors,
         borderWidth: moderateScale(1),
         borderLeftWidth: moderateScale(1),
         borderBottomRightRadius: moderateScale(8),
         borderBottomLeftRadius: moderateScale(8),
         borderTopRightRadius: moderateScale(8),
         borderTopLeftRadius: moderateScale(8),
-        backgroundColor: '#ba68c8',
+        backgroundColor: colors.templatescardViewbgcolors,
     
       },
       cardTitle: {
@@ -63,7 +65,7 @@ export const templatestyle = StyleSheet.create({
       },
       cardDetails: {
         fontSize: moderateScale(12),
-        color: '#444'
+        color: colors.templatescardDetailscolors
       },
       iconView: {
         flex: 1.5,
@@ -90,6 +92,23 @@ export const templatestyle = StyleSheet.create({
       tmpl:{
         flexDirection: "row", 
         padding: moderateScale(30) 
-      }
-    
+      },
+
+      actionButtonIcon: {
+        fontSize: 20,
+        height: 22,
+        color: colors.templatesactionButtonIconcolors,
+        alignSelf:'center'
+      },
+
+      // actionButtonIcon: {
+      
+      //   fontSize: 20,
+      //   height: 22,
+      //   color: 'white',
+      //   alignSelf:'center',
+      //   marginVertical: moderateScale(20),
+      // },
+
+     
 });

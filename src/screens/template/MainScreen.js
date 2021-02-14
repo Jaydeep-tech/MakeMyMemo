@@ -5,9 +5,11 @@ import {
   FlatList,
   Image,
   TouchableOpacity,
+  SafeAreaView
 } from 'react-native';
-import { images } from '../../themes'
+import { images, colors } from '../../themes'
 import { templatestyle } from '../../styles'
+import ActionButton from 'react-native-action-button';
 
 export default class MainScreen extends Component {
   constructor(props) {
@@ -71,7 +73,7 @@ export default class MainScreen extends Component {
                   source={images.share}
                 />
               </TouchableOpacity>
-              <TouchableOpacity style={templatestyle.btnicon}>
+              <TouchableOpacity style={templatestyle.btnicon} onPress={() => this.props.navigation.navigate('CutomerDetails')}>
                 <Image
                   style={templatestyle.eyeImgView}
                   source={images.view}
@@ -81,17 +83,34 @@ export default class MainScreen extends Component {
           </View>
         </View>
       </View>
+      
     );
   }
 
   render() {
     return (
-      <FlatList style={templatestyle.container}
-        data={this.state.data}
-        renderItem={({ item }) => (
-          this.renderRow(item)
-        )}
-      />
+      <SafeAreaView style={templatestyle.container}>
+        <View style={templatestyle.container}>
+       
+          <FlatList  style={templatestyle.container}
+            data={this.state.data}
+            renderItem={({ item }) => (
+              this.renderRow(item)
+            )}
+          />
+          <ActionButton buttonColor={colors.actionbtnColor}>
+            <ActionButton.Item buttonColor={colors.actionbtnColor}>
+              {/* <ActionButton.Item buttonColor='#9b59b6' onPress={() => console.log("notes tapped!")}> */}
+
+              <Image
+                source={images.actionbtn}
+                resizeMode="contain"
+                style={templatestyle.actionButtonIcon}
+              />
+            </ActionButton.Item>
+          </ActionButton>
+        </View>
+      </SafeAreaView>
     );
   }
 }

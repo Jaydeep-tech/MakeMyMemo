@@ -6,7 +6,7 @@ export const contactstyle = StyleSheet.create({
     
     container: {
         flex: 1,
-        backgroundColor: 'white',
+        backgroundColor: colors.contactbgColors,
       },
       safeArea:{
         flex: 1

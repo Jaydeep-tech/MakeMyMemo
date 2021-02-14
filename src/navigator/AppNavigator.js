@@ -1,15 +1,18 @@
 // Import React and Component
 import React from 'react';
-
+import { View, Text, Alert, StyleSheet, Image, TouchableOpacity } from 'react-native';
 // Import Navigators from React Navigation
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 // Import Screens
 import SplashScreen from '../screens/splashscreen/SplashScreen';
 import MainScreen from '../screens/template/MainScreen';
+import CutomerDetails from '../screens/customer/CutomerDetails';
 import DrawerNavigationRoutes from '../container/router/DrawerNavigationRoutes';
-import {strings,colors} from '../themes'
+import { strings, colors, images } from '../themes';
+import { customerDetailstyle } from '../styles';
+
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
@@ -21,9 +24,9 @@ const AppNavigator = () => {
           name="SplashScreen"
           component={SplashScreen}
           // Hiding header for Splash Screen
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
-        
+
         <Stack.Screen
           name="MainScreen"
           component={MainScreen}
@@ -31,12 +34,44 @@ const AppNavigator = () => {
           headerStyle: { backgroundColor: colors.headerstylebgColor }, headerTintColor: colors.drawerheaderTintColor,}}
         />
 
+        <Stack.Screen
+          name="CutomerDetails"
+          component={CutomerDetails}
+          options={{
+            title: strings.customerDetailsTitle, headerTitleStyle: { fontWeight: 'bold', alignSelf: 'center', },
+            headerLeft: () => (
+              <TouchableOpacity>
+                <Image
+                  source={images.leftArr}
+                  style={customerDetailstyle.haderLefticon}
+                /></TouchableOpacity>
+            ),
+            headerRight: () => (
+              <View style={customerDetailstyle.haderrow}>
+                <TouchableOpacity>
+                  <Image
+                    source={images.likenew}
+                    style={customerDetailstyle.headerLeftimg}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image
+                    source={images.sharenew}
+                    style={customerDetailstyle.headerRightimg}
+                  />
+                </TouchableOpacity>
+              </View>
+            ),
+            headerStyle: { backgroundColor: colors.customerDetailsHaderColors, shadowColor: '#fff', elevation: 0.5 }, headerTintColor: colors.customerDetailsHaderTintColor
+          }}
+        />
+
         {/* Navigation Drawer as a landing page */}
         <Stack.Screen
           name="DrawerNavigationRoutes"
           component={DrawerNavigationRoutes}
           // Hiding header for Navigation Drawer as we will use our custom header
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

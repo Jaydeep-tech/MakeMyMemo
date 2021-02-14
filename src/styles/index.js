@@ -8,5 +8,6 @@ import {aboutstyle} from './about';
 import {profilestyle} from './profile';
 import {settingstyle} from './setting';
 import {contactstyle} from './contact';
+import {customerDetailstyle} from './customerDetails'
 
-export {splashstyle,templatestyle,homestyle,customSidebarMenustyle,drawerRoutesstyle,navigationDrawerstyle,aboutstyle,profilestyle,settingstyle,contactstyle}
+export {splashstyle,templatestyle,homestyle,customSidebarMenustyle,drawerRoutesstyle,navigationDrawerstyle,aboutstyle,profilestyle,settingstyle,contactstyle,customerDetailstyle}

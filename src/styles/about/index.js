@@ -6,7 +6,7 @@ export const aboutstyle = StyleSheet.create({
     
     container: {
         flex: 1,
-        backgroundColor: 'white',
+        backgroundColor: colors.aboutbgColors,
       },
       safeArea:{
         flex: 1

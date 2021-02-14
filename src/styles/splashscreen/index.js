@@ -27,7 +27,7 @@ export const splashstyle = StyleSheet.create({
         borderRadius: moderateScale(150),
     },
     title:{
-        color:'#ffff',
+        color:colors.splashscreentitlecolors,
         fontSize:moderateScale(30),
         fontWeight:'bold',
         fontStyle:'italic'

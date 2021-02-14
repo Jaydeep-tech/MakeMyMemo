@@ -13,7 +13,11 @@ export default AppImages = {
   "aboutslidemenu": require('../assets/images/sideMenu/about.png'),
   "profileslidemenu": require('../assets/images/sideMenu/profile.png'),
   "settingsslidemenu": require('../assets/images/sideMenu/settings.png'),
-  "contactslidemenu": require('../assets/images/sideMenu/contact.png')
+  "contactslidemenu": require('../assets/images/sideMenu/contact.png'),
+  "actionbtn": require('../assets/images/customers/pen.png'),
+  "leftArr": require('../assets/images/general/backLeftArrow/leftArr.png'),
+  "sharenew": require('../assets/images/customers/shareCustDetails.png'),
+  "likenew": require('../assets/images/customers/heartCustDetails.png'),
   
   
     
