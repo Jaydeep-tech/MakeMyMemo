@@ -62,5 +62,24 @@ const colors = {
     "templatesactionButtonIconcolors":"#FFFFFF",
     "homeactiveDotcolors":"#FFFFFF",
 
+    "writerMemorycolors":"#1C87C9",
+    "writerMemoryTextcolors":"#ffff",
+    "multiinputbordercolors":"#ba68c8",
+    "buttonStylebgcolors":"#1C87C9",
+    "buttonStylecolors":"#ffff",
+    "buttonStylebordercolors":"#7DE24E",
+    "buttonTextcolors":"#ffff",
+    "storyTitlecolors":"grey",
+    "TextInputplaceholderTextColor":"#8b9cb5",
+    "TextInputunderlineColorAndroid":"#ba68c8",
+    
+
+
+
+
+
+
+
+
 };
 export default colors;

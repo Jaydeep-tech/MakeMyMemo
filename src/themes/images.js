@@ -18,6 +18,8 @@ export default AppImages = {
   "leftArr": require('../assets/images/general/backLeftArrow/leftArr.png'),
   "sharenew": require('../assets/images/customers/shareCustDetails.png'),
   "likenew": require('../assets/images/customers/heartCustDetails.png'),
+
+  "lovestory": require('../assets/images/template/lovestory.png'),
   
   
     

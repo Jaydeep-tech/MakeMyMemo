@@ -9,5 +9,6 @@ import {profilestyle} from './profile';
 import {settingstyle} from './setting';
 import {contactstyle} from './contact';
 import {customerDetailstyle} from './customerDetails'
+import { createPoststyle } from './createPost'
 
-export {splashstyle,templatestyle,homestyle,customSidebarMenustyle,drawerRoutesstyle,navigationDrawerstyle,aboutstyle,profilestyle,settingstyle,contactstyle,customerDetailstyle}
+export {splashstyle,templatestyle,homestyle,customSidebarMenustyle,drawerRoutesstyle,navigationDrawerstyle,aboutstyle,profilestyle,settingstyle,contactstyle,customerDetailstyle,createPoststyle}

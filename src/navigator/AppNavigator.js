@@ -9,13 +9,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from '../screens/splashscreen/SplashScreen';
 import MainScreen from '../screens/template/MainScreen';
 import CutomerDetails from '../screens/customer/CutomerDetails';
+import Createpost from '../screens/createpost/Createpost';
 import DrawerNavigationRoutes from '../container/router/DrawerNavigationRoutes';
 import { strings, colors, images } from '../themes';
 import { customerDetailstyle } from '../styles';
 
 const Stack = createStackNavigator();
 
-const AppNavigator = () => {
+const AppNavigator = (props) => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="SplashScreen">
@@ -28,24 +29,33 @@ const AppNavigator = () => {
         />
 
         <Stack.Screen
+          name="Createpost"
+          component={Createpost}
+          options={{title: strings.createPostTitle, headerTitleStyle: {fontWeight: 'bold'},
+          headerStyle: { backgroundColor: colors.headerstylebgColor }, headerTintColor: colors.drawerheaderTintColor,}}
+        />
+
+        <Stack.Screen
           name="MainScreen"
           component={MainScreen}
           options={{title: strings.TemplateTitle, headerTitleStyle: {fontWeight: 'bold'},
           headerStyle: { backgroundColor: colors.headerstylebgColor }, headerTintColor: colors.drawerheaderTintColor,}}
         />
 
+        
+
         <Stack.Screen
           name="CutomerDetails"
           component={CutomerDetails}
           options={{
             title: strings.customerDetailsTitle, headerTitleStyle: { fontWeight: 'bold', alignSelf: 'center', },
-            headerLeft: () => (
-              <TouchableOpacity>
-                <Image
-                  source={images.leftArr}
-                  style={customerDetailstyle.haderLefticon}
-                /></TouchableOpacity>
-            ),
+            // headerLeft: () => (
+            //   <TouchableOpacity onPress={() => navigation.navigate('MainScreen')}>
+            //     <Image
+            //       source={images.leftArr}
+            //       style={customerDetailstyle.haderLefticon}
+            //     /></TouchableOpacity>
+            // ),
             headerRight: () => (
               <View style={customerDetailstyle.haderrow}>
                 <TouchableOpacity>

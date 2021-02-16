@@ -99,7 +99,18 @@ export default AppString = {
   profileTitle:"Profile",
   settingTitle:"Settings",
   contactTitle:"Contact",
-  customerDetailsTitle:"My Details"
+  customerDetailsTitle:"My Details",
+
+  createPostTitle:"START TO STAY",
+  writerMemoryText:"Write Your Memory",
+  storyTitle1:"Story Title",
+  storyTitle2:"Start to Say here",
+  storyTitle3:"Memory Image",
+  buttonTextTitle:"Post Your Story",
+  storyTitleplaceholder:"My Best Memory Ever !!",
+  ChkTextTitle1:"Want to hide username",
+  ChkTextTitle2:"Accept Terms & Condition and Privacy Policy"
+
 
 
 };

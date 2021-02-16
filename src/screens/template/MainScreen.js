@@ -98,16 +98,16 @@ export default class MainScreen extends Component {
               this.renderRow(item)
             )}
           />
-          <ActionButton buttonColor={colors.actionbtnColor}>
-            <ActionButton.Item buttonColor={colors.actionbtnColor}>
+          <ActionButton buttonColor={colors.actionbtnColor} onPress={() => this.props.navigation.navigate('Createpost')}>
+            {/* <ActionButton.Item buttonColor={colors.actionbtnColor}> */}
               {/* <ActionButton.Item buttonColor='#9b59b6' onPress={() => console.log("notes tapped!")}> */}
 
-              <Image
+              {/* <Image
                 source={images.actionbtn}
                 resizeMode="contain"
                 style={templatestyle.actionButtonIcon}
               />
-            </ActionButton.Item>
+            </ActionButton.Item> */}
           </ActionButton>
         </View>
       </SafeAreaView>

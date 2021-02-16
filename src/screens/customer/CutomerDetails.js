@@ -14,8 +14,8 @@ const CutomerDetails = () => {
             <View style={customerDetailstyle.cardInfo}>
               <Image source={images.slider3} style={customerDetailstyle.logo} />
               <View><Text style={customerDetailstyle.cardTitle}>Jaydeep Rajani</Text></View>
-              <View><Text style={customerDetailstyle.cardDetails}>Software Trainner </Text></View>
-              <View><Text style={customerDetailstyle.cardDetails2}>Software Trainner </Text></View>
+              <View><Text style={customerDetailstyle.cardDetails}>Software Trainee </Text></View>
+              <View><Text style={customerDetailstyle.cardDetails2}>Software Trainee </Text></View>
             </View>
           </View>
           <View style={customerDetailstyle.cardInfo2}>
