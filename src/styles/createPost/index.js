@@ -37,13 +37,13 @@ export const createPoststyle = StyleSheet.create({
         alignSelf: 'center',
       },
       card: {
-        height: moderateScale(540),
-        marginVertical: moderateScale(2), ///Margin between image and card
+        height: moderateScale(680),
+        marginVertical: moderateScale(10), ///Margin between image and card
         flexDirection: 'row',
         shadowColor: colors.customerDetailsCardShadowColors,
         shadowOffset: { width: moderateScale(0), height: moderateScale(1) },
         shadowOpacity: moderateScale(0.8),
-        shadowRadius: moderateScale(2),
+        shadowRadius: moderateScale(5),
         elevation: moderateScale(5)
       },
      
@@ -61,30 +61,12 @@ export const createPoststyle = StyleSheet.create({
       cardInfo: {
         flex: 2,
         padding: moderateScale(10),
-        borderColor: colors.customerDetailsBorderColors,
+        borderColor: colors.createpostBorderColors1,
         borderWidth: moderateScale(2),
-        borderLeftWidth: moderateScale(1),
-        borderBottomRightRadius: moderateScale(8),
-        borderBottomLeftRadius:moderateScale(8),
-        borderTopRightRadius: moderateScale(8),
-        borderTopLeftRadius:moderateScale(8),
-        borderTopRightRadius:moderateScale(8),
+        borderRadius:moderateScale(15),
         backgroundColor: colors.customerDetailsbgColors,
       },
       
-      cardView: {
-        flex: 1,
-        padding: moderateScale(0),
-        borderColor: colors.customerDetailsBorderColors,
-        borderWidth: moderateScale(1),
-        borderLeftWidth: moderateScale(1),
-        // borderBottomRightRadius: moderateScale(8),
-        // borderBottomLeftRadius: moderateScale(8),
-        // borderTopRightRadius: moderateScale(8),
-        // borderTopLeftRadius: moderateScale(8),
-        //backgroundColor: '#ba68c8',
-    
-      },
       cardTitle: {
         fontWeight: 'bold',
         color: colors.customerDetailsCardTitleColors,
@@ -115,14 +97,14 @@ export const createPoststyle = StyleSheet.create({
         height: moderateScale(140),
         width: moderateScale(310),
         alignSelf: 'center',
-        borderRadius:5,
+        borderRadius:15,
         marginTop:moderateScale(1) 
       },
        
       
       innercard: {
-        height: moderateScale(300),
-        marginVertical: moderateScale(25), ///Margin between image and card
+        height: moderateScale(420),
+        marginVertical: moderateScale(35), ///Margin between image and card
         flexDirection: 'row',
         shadowColor: colors.customerDetailsCardShadowColors,
         shadowOffset: { width: moderateScale(0), height: moderateScale(1) },
@@ -131,31 +113,35 @@ export const createPoststyle = StyleSheet.create({
         elevation: moderateScale(5)
       },
       ineercardInfo: {
-        flex: 2,
+        flex: 1,
         padding: moderateScale(10),
-        borderColor: colors.customerDetailsBorderColors,
-        borderWidth: moderateScale(1),
-        borderLeftWidth: moderateScale(1),
-        // borderBottomRightRadius: 8,
-        // borderBottomLeftRadius:8,
-        // borderTopRightRadius: 8,
-        // borderTopLeftRadius:8,
-        // borderTopRightRadius:8,
+        borderColor: colors.createpostBorderColors2,
+        borderWidth: moderateScale(1.5),
+        borderRadius:moderateScale(15),
+        // borderBottomRightRadius: moderateScale(15),
+        // borderBottomLeftRadius:moderateScale(15),
+        // borderTopRightRadius: moderateScale(15),
+        // borderTopLeftRadius:moderateScale(15),
+        // borderTopRightRadius:moderateScale(15),
         backgroundColor: colors.customerDetailsbgColors,
     
       },
       writerMemory: {
         height: moderateScale(40),
-        width: moderateScale(130),
+        width: moderateScale(200),
         backgroundColor:colors.writerMemorycolors,
         marginTop:moderateScale(-28),
+        borderRadius: moderateScale(15),
+        alignSelf:'center'
       }, 
       writerMemoryText: 
       {
         color:colors.writerMemoryTextcolors,
-        marginHorizontal:moderateScale(5),
-        marginVertical:moderateScale(10),
-        fontWeight:'bold'
+        // marginHorizontal:moderateScale(5),
+        marginVertical:moderateScale(7),
+        fontWeight:'bold',
+        alignSelf:'center',
+        fontSize:18,
       },
       multiinput: {
         marginVertical:moderateScale(2),
@@ -185,7 +171,12 @@ export const createPoststyle = StyleSheet.create({
       fontWeight:'bold'
     },
     MainChkRow:{
-      flexDirection: 'column'
+      flexDirection: 'column',
+      marginVertical:moderateScale(17),
+    },
+    SecondChkRow:{
+      flexDirection: 'column',
+      
     },
     ChkTextRow:{
       marginVertical:moderateScale(-26),
@@ -198,11 +189,11 @@ export const createPoststyle = StyleSheet.create({
     },
     storyTitle1:{
       color:colors.storyTitlecolors,
-      marginVertical:moderateScale(3)
+      marginVertical:moderateScale(10)
     },
     StoryTitle2:{
       color:colors.storyTitlecolors,
-      marginVertical:moderateScale(8)
+      marginVertical:moderateScale(20)
     },
     firsttxt:{
       marginVertical:moderateScale(-8)

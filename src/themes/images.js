@@ -21,6 +21,12 @@ export default AppImages = {
 
   "lovestory": require('../assets/images/template/lovestory.png'),
   
+  "profilesurName": require('../assets/images/Login/user_email.png'),
+  "profileconatctNo": require('../assets/images/Login/contactNumLogo.png'),
+  "profileEmail": require('../assets/images/Login/email.png'),
+  "profileEdit": require('../assets/images/customers/edit.png'),
+  "ProfileIcon": require('../assets/images/customers/Profile.png'),
+  "ProfilebtnIcon": require('../assets/images/customers/btnCamera.png'),
   
     
 };

@@ -28,6 +28,9 @@ const colors = {
 
     "customerDetailsCardShadowColors":"#999",
     "customerDetailsBorderColors":"#ccc",
+    //"customerDetailsBorderColors":"#ba68c8",
+    "createpostBorderColors1":"#ba68c8",
+    "createpostBorderColors2":"#1C87C9",
     "customerDetailsbgColors":"#FFFFFF",
     "customerDetailsCardTitleColors":"black",
     "customerDetailsCardTitle2Colors":"#ED0285",
@@ -73,9 +76,23 @@ const colors = {
     "TextInputplaceholderTextColor":"#8b9cb5",
     "TextInputunderlineColorAndroid":"#ba68c8",
     
+    "editProfileHaderbgColors":"#FFFFFF",
+    "editProfileHaderTintColors":"black",
+    "editProfileTextInputplaceholderTextColor":"black",
+    "editProfileTextInputunderlineColorAndroid":"lightgrey",
+    "editProfilebuttonTextcolors":"#ffff",
+    "editProfilebuttonbgcolors":"#00BFFF",
+    "editProfilebuttonStylecolors":"#ffff",
+    "editProfilebuttonStylebordercolors":"#7DE24E",
+    "editProfileAlltxtcolors":"black",
+    "editProfileAllTitlecolors":"#00BFFF",
+    "editProfileavatarColors":"#FFFFFF",
+    "editProfilecameraavatarColors":"#FFFFFF",
+    "editProfileNameColors":"#696969",
 
-
-
+    "ProfileavatarborderColors":"#FFFFFF",
+    "ProfileNameColors":"#696969",
+    "ProfileEmailvalueTitleColors":"#00BFFF",
 
 
 

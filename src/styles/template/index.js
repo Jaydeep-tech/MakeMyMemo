@@ -20,9 +20,9 @@ export const templatestyle = StyleSheet.create({
         flexDirection: 'row',
         shadowColor: colors.templateshadowcardcolors,
         shadowOffset: { width: moderateScale(0), height: moderateScale(1) },
-        shadowOpacity: 0.8,
-        shadowRadius: 2,
-        elevation: 5
+        shadowOpacity: moderateScale(0.8),
+        shadowRadius: moderateScale(2),
+        elevation: moderateScale(5)
       },
       cardImgWrapper: {
         flex: 1,
@@ -32,17 +32,17 @@ export const templatestyle = StyleSheet.create({
         width: '100%',
         alignSelf: 'center',
         borderRadius: moderateScale(8),
-        borderBottomRightRadius: 0,
-        borderTopRightRadius: 0,
+        borderBottomRightRadius: moderateScale(0),
+        borderTopRightRadius: moderateScale(0),
       },
       cardInfo: {
         flex: 2,
-        padding: 10,
+        padding: moderateScale(10),
         borderColor: colors.templatescardInfobordercolors,
-        borderWidth: 1,
-        borderLeftWidth: 0,
-        borderBottomRightRadius: 8,
-        borderTopRightRadius: 8,
+        borderWidth: 1.5,
+        borderLeftWidth: moderateScale(0),
+        borderBottomRightRadius: moderateScale(8),
+        borderTopRightRadius: moderateScale(8),
         backgroundColor: colors.templatescardInfobgcolors,
     
       },
@@ -95,8 +95,8 @@ export const templatestyle = StyleSheet.create({
       },
 
       actionButtonIcon: {
-        fontSize: 20,
-        height: 22,
+        fontSize: moderateScale(20),
+        height: moderateScale(22),
         color: colors.templatesactionButtonIconcolors,
         alignSelf:'center'
       },

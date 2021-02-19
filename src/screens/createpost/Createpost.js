@@ -61,7 +61,7 @@ const Createpost = () => {
                                                 <Text style={createPoststyle.ChkTextRow}>{strings.ChkTextTitle1}</Text>
                                             </View>
                                         </View>
-                                        <View style={createPoststyle.MainChkRow}>
+                                        <View style={createPoststyle.SecondChkRow}>
                                             <CheckBox
                                                 disabled={false}
                                                 value={toggleCheckBox2}

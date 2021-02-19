@@ -14,7 +14,7 @@ import Settings from '../Drawer/Settings';
 import CustomSidebarMenu from '../../components/SidebarMenu/CustomSidebarMenu';
 import NavigationDrawerHeader from '../../components/DrawerHeader/NavigationDrawerHeader';
 import { images } from '../../themes';
-import { drawerRoutesstyle } from '../../styles';
+import { drawerRoutesstyle,profilestyle } from '../../styles';
 import { colors, strings } from '../../themes';
 
 const Stack = createStackNavigator();
@@ -68,6 +68,16 @@ const ProfileScreenStack = ({ navigation }) => {
       screenOptions={{
         headerLeft: () => (
           <NavigationDrawerHeader navigationProps={navigation} />
+        ),
+        headerRight: () => (
+          <View style={profilestyle.haderrow}>
+            <TouchableOpacity onPress={() => navigation.navigate('EditProfile')}>
+              <Image
+                source={images.profileEdit}
+                style={profilestyle.headerRightimg}
+              />
+            </TouchableOpacity>
+          </View>
         ),
         headerStyle: { backgroundColor: colors.headerstylebgColor }
 

@@ -109,8 +109,12 @@ export default AppString = {
   buttonTextTitle:"Post Your Story",
   storyTitleplaceholder:"My Best Memory Ever !!",
   ChkTextTitle1:"Want to hide username",
-  ChkTextTitle2:"Accept Terms & Condition and Privacy Policy"
+  ChkTextTitle2:"Accept Terms & Condition and Privacy Policy",
 
-
+  editProfileTitle:"Edit Profile", 
+  editProfileSurNameTitle:"Sur Name",  
+  editProfileConatctTitle:"Contact No.",
+  editProfileEmailTitle:"Email Address", 
+  editProfilebtnTitle:"UPDATE PROFILE", 
 
 };

@@ -10,6 +10,7 @@ import SplashScreen from '../screens/splashscreen/SplashScreen';
 import MainScreen from '../screens/template/MainScreen';
 import CutomerDetails from '../screens/customer/CutomerDetails';
 import Createpost from '../screens/createpost/Createpost';
+import EditProfile from '../screens/editprofile/EditProfile';
 import DrawerNavigationRoutes from '../container/router/DrawerNavigationRoutes';
 import { strings, colors, images } from '../themes';
 import { customerDetailstyle } from '../styles';
@@ -42,7 +43,14 @@ const AppNavigator = (props) => {
           headerStyle: { backgroundColor: colors.headerstylebgColor }, headerTintColor: colors.drawerheaderTintColor,}}
         />
 
-        
+        <Stack.Screen
+          name="EditProfile"
+          component={EditProfile}
+          options={{
+            title: strings.editProfileTitle, headerTitleStyle: { fontWeight: 'bold', alignSelf: 'center',marginRight:50 },
+            headerStyle: { backgroundColor: colors.editProfileHaderbgColors, shadowColor: '#fff', elevation: 0.5 }, headerTintColor: colors.editProfileHaderTintColors
+          }}
+        />
 
         <Stack.Screen
           name="CutomerDetails"
