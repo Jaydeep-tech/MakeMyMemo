@@ -100,6 +100,21 @@ export const templatestyle = StyleSheet.create({
         color: colors.templatesactionButtonIconcolors,
         alignSelf:'center'
       },
+      tmpbtn:
+      {
+        right:moderateScale(20),
+        bottom:moderateScale(30),
+        position:'absolute',
+        backgroundColor:colors.templatebtnColors,
+        height:moderateScale(60),
+        width:moderateScale(60),
+        borderRadius:moderateScale(100)
+      },
+      tmplbtncon:
+      {
+        alignSelf:'center',
+        marginVertical:moderateScale(12)
+      }
 
       // actionButtonIcon: {
       

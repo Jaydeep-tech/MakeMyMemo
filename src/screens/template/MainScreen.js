@@ -10,7 +10,7 @@ import {
 import { images, colors } from '../../themes'
 import { templatestyle } from '../../styles'
 import ActionButton from 'react-native-action-button';
-
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 export default class MainScreen extends Component {
   constructor(props) {
     super(props);
@@ -65,7 +65,7 @@ export default class MainScreen extends Component {
                 <Image
                   style={templatestyle.heartshare}
                   source={images.like}
-                />
+                /> 
               </TouchableOpacity>
               <TouchableOpacity style={templatestyle.btnicon}>
                 <Image
@@ -98,17 +98,12 @@ export default class MainScreen extends Component {
               this.renderRow(item)
             )}
           />
-          <ActionButton buttonColor={colors.actionbtnColor} onPress={() => this.props.navigation.navigate('Createpost')}>
-            {/* <ActionButton.Item buttonColor={colors.actionbtnColor}> */}
-              {/* <ActionButton.Item buttonColor='#9b59b6' onPress={() => console.log("notes tapped!")}> */}
-
-              {/* <Image
-                source={images.actionbtn}
-                resizeMode="contain"
-                style={templatestyle.actionButtonIcon}
-              />
-            </ActionButton.Item> */}
-          </ActionButton>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('Createpost')}
+           style={templatestyle.tmpbtn}>
+          <View>
+            <Icon name="pencil-outline" size={35} color={colors.templatebtniconColors} style={templatestyle.tmplbtncon} />
+          </View>
+        </TouchableOpacity>
         </View>
       </SafeAreaView>
     );

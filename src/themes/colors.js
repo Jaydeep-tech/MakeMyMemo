@@ -93,6 +93,8 @@ const colors = {
     "ProfileavatarborderColors":"#FFFFFF",
     "ProfileNameColors":"#696969",
     "ProfileEmailvalueTitleColors":"#00BFFF",
+    "templatebtniconColors":"white",
+    "templatebtnColors":"#ba68c8",
 
 
 

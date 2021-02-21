@@ -12,8 +12,8 @@ const SplashScreen = ({ navigation }) => {
   useEffect(() => {
     setTimeout(() => {
       setAnimating(false);
-      //navigation.replace('MainScreen')
-      navigation.replace('DrawerNavigationRoutes')
+      navigation.replace('MainScreen')
+      //navigation.replace('DrawerNavigationRoutes')
     }, 5000);
   }, []);
 
