@@ -99,6 +99,7 @@ export default AppString = {
   profileTitle:"Profile",
   settingTitle:"Settings",
   contactTitle:"Contact",
+  loginTitle:"Login",
   customerDetailsTitle:"My Details",
 
   createPostTitle:"START TO STAY",
@@ -116,5 +117,18 @@ export default AppString = {
   editProfileConatctTitle:"Contact No.",
   editProfileEmailTitle:"Email Address", 
   editProfilebtnTitle:"UPDATE PROFILE", 
+  loginbtntextTitle:"LOGIN",
+  loginbtnRegisertextTitle:"CREATE ACCOUNT",
+  RegisterHeaderTitle:"Register",
+  RegisterMainTitle:"Create Account",
+  RegisterSubTitle:"Create a platform for managing your cases & clients",
+  RegisterButtonTitle:"SIGN UP",
+  
+  RegisterlblFirstName:"Full Name*",
+  RegisterlblOrgName:"Organization Name",
+  RegisterlblEmail:"Email Address*",
+  RegisterlblMobileNo:"Mobile Number",
+  RegisterlblPassword:"Password*",
 
+  
 };

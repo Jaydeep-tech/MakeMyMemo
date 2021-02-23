@@ -11,6 +11,7 @@ import About from '../Drawer/About';
 import Profile from '../Drawer/Profile';
 import Contact from '../Drawer/Contact';
 import Settings from '../Drawer/Settings';
+import Login from '../Drawer/Login';
 import CustomSidebarMenu from '../../components/SidebarMenu/CustomSidebarMenu';
 import NavigationDrawerHeader from '../../components/DrawerHeader/NavigationDrawerHeader';
 import { images } from '../../themes';
@@ -143,6 +144,22 @@ const ContactScreenStack = ({ navigation }) => {
 };
 
 
+const LoginScreenStack = ({ navigation }) => {
+  return (
+    <Stack.Navigator
+      initialRouteName="Login">
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{
+          headerTintColor: colors.drawerheaderTintColor,
+          headerShown:false
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
+
 
 const DrawerNavigatorRoutes = (props) => {
   return (
@@ -240,6 +257,21 @@ const DrawerNavigatorRoutes = (props) => {
           )
         }}
         component={ContactScreenStack}
+      />
+
+      <Drawer.Screen
+        name="LoginScreenStack"
+        options={{
+          drawerLabel: strings.loginTitle, drawerIcon: ({ tintColor }) => (
+
+            <Image
+              source={images.contactslidemenu}
+              resizeMode="contain"
+              style={drawerRoutesstyle.drawerimg}
+            />
+          )
+        }}
+        component={LoginScreenStack}
       />
     </Drawer.Navigator>
   );

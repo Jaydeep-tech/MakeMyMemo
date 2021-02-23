@@ -95,8 +95,31 @@ const colors = {
     "ProfileEmailvalueTitleColors":"#00BFFF",
     "templatebtniconColors":"white",
     "templatebtnColors":"#ba68c8",
+    "logincontainerbgColors":"#66CCFF",
+    "logininnercardborderColors":"#EEF6FE",
+    "logininnercardbgColors":"#EEF6FE",
 
+    "loginbuttonStylebgColors":"#EEF6FE",
+    "loginbuttonStyleColors":"#61B4FF",
+    "loginbuttonStyleborderColors":"#61B4FF",
 
+    "loginbutton2StylebgColors":"#EEF6FE",
+    "loginbutton2StyleColors":"#61B4FF",
+    "loginbutton2StyleborderColors":"#61B4FF",
+
+    "loginbuttonTextColors":"#61B4FF",
+    "RegisterHaderbgColors":"#FFFFFF",
+    "RegisterHaderTintColors":"black",
+    "RegisterlinearGradientColor1":"#99FFFF",
+    "RegisterlinearGradientColor2":"#99CCFF",
+
+    "RegisterineercardInfoColor":"white",
+    "RegisterbuttonStylebgColor":"#288FFF",
+    "RegisterbuttonStyleborderColors":"#288FFF",
+    "RegisterbuttonTextColors":"white",
+    "RegisterAllTextborderColors":"grey",
+    "RegisterSubTitleColors":"grey",
+    "RegisterAllLabelColors":"grey",
 
 
 

@@ -27,6 +27,7 @@ export default AppImages = {
   "profileEdit": require('../assets/images/customers/edit.png'),
   "ProfileIcon": require('../assets/images/customers/Profile.png'),
   "ProfilebtnIcon": require('../assets/images/customers/btnCamera.png'),
+  "SchoolTech": require('../assets/images/customers/schooltech.png'),
   
     
 };

@@ -101,7 +101,7 @@ export default class MainScreen extends Component {
           <TouchableOpacity onPress={() => this.props.navigation.navigate('Createpost')}
            style={templatestyle.tmpbtn}>
           <View>
-            <Icon name="pencil-outline" size={35} color={colors.templatebtniconColors} style={templatestyle.tmplbtncon} />
+            <Icon name="pencil-outline" size={25} color={colors.templatebtniconColors} style={templatestyle.tmplbtncon} />
           </View>
         </TouchableOpacity>
         </View>
