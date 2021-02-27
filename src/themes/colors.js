@@ -120,7 +120,10 @@ const colors = {
     "RegisterAllTextborderColors":"grey",
     "RegisterSubTitleColors":"grey",
     "RegisterAllLabelColors":"grey",
-
+    "EditProfileBottomSheetbgColors":"white",
+    "EditProfileBottomSheetaAllPanelColors":"#003470",
+    "EditProfileBottomSheetpanelButtonTitleColors":"white",
+    "CreatePostbtnFileUploadColors":"grey",
 
 
 };

@@ -4,9 +4,22 @@ import { View, Text, SafeAreaView, TouchableOpacity, Image, ScrollView, TextInpu
 import { createPoststyle } from '../../styles';
 import CheckBox from '@react-native-community/checkbox'
 import { images, colors, strings } from '../../themes'
+import ImagePicker from 'react-native-image-crop-picker';
 const Createpost = () => {
     const [toggleCheckBox1, setToggleCheckBox1] = useState(false)
     const [toggleCheckBox2, setToggleCheckBox2] = useState(false)
+    const [image, setImage] = useState('');
+    const choosePhotoFromLibrary = () => {
+        ImagePicker.openPicker({
+            width: 300,
+            height: 300,
+            cropping: true,
+            compressImageQuality: 0.7
+        }).then(image => {
+            //console.log(image);
+            setImage(image.path);
+        });
+    }
     return (
         <SafeAreaView style={createPoststyle.safeArea}>
             <ScrollView>
@@ -47,10 +60,12 @@ const Createpost = () => {
                                                 blurOnSubmit={false}
                                             />
                                         </View>
-                                        {/* <View>
-                                            <Text style={createPoststyle.StoryTitle}>{strings.storyTitle3}</Text>
-
-                                        </View> */}
+                                        <View>
+                                            <Text style={createPoststyle.StoryTitle3}>{strings.storyTitle3}</Text>
+                                            <TouchableOpacity onPress={() => choosePhotoFromLibrary()} style={createPoststyle.btnfileupload}>
+                                                <Text>{strings.CreatePostbtnFileUploadTitle} <Image source={{ uri: image.path }} /></Text>
+                                            </TouchableOpacity>
+                                        </View>
                                         <View style={createPoststyle.MainChkRow}>
                                             <CheckBox
                                                 disabled={false}

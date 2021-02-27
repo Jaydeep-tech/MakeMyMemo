@@ -17,6 +17,7 @@ import NavigationDrawerHeader from '../../components/DrawerHeader/NavigationDraw
 import { images } from '../../themes';
 import { drawerRoutesstyle,profilestyle } from '../../styles';
 import { colors, strings } from '../../themes';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -183,13 +184,15 @@ const DrawerNavigatorRoutes = (props) => {
         options={{
           drawerLabel: strings.homeTitle,
           drawerIcon: ({ tintColor }) => (
-
+            
             <Image
               source={images.homeslidemenu}
               resizeMode="contain"
               // style={{ width: 20, height: 20, tintColor: tintColor }}
               style={drawerRoutesstyle.drawerimg}
             />
+            // <Icon name="home" size={25} color='#ba68c8' 
+            // style={drawerRoutesstyle.drawerimg} />
           )
         }}
         component={HomeScreenStack}
@@ -206,6 +209,8 @@ const DrawerNavigatorRoutes = (props) => {
               resizeMode="contain"
               style={drawerRoutesstyle.drawerimg}
             />
+            // <Icon name="information" size={25} color='#ba68c8' 
+            // style={drawerRoutesstyle.drawerimg} />
           )
         }}
         component={AboutScreenStack}
@@ -222,6 +227,9 @@ const DrawerNavigatorRoutes = (props) => {
               resizeMode="contain"
               style={drawerRoutesstyle.drawerimg}
             />
+
+            // <Icon name="people" size={25} color='#ba68c8' 
+            // style={drawerRoutesstyle.drawerimg} />
           )
         }}
         component={ProfileScreenStack}
@@ -238,6 +246,8 @@ const DrawerNavigatorRoutes = (props) => {
               resizeMode="contain"
               style={drawerRoutesstyle.drawerimg}
             />
+            // <Icon name="settings" size={25} color='#ba68c8' 
+            // style={drawerRoutesstyle.drawerimg} />
           )
         }}
         component={SettingScreenStack}
@@ -254,6 +264,8 @@ const DrawerNavigatorRoutes = (props) => {
               resizeMode="contain"
               style={drawerRoutesstyle.drawerimg}
             />
+            // <Icon name="phone-portrait" size={25} color='#ba68c8' 
+            // style={drawerRoutesstyle.drawerimg} />
           )
         }}
         component={ContactScreenStack}
@@ -269,6 +281,8 @@ const DrawerNavigatorRoutes = (props) => {
               resizeMode="contain"
               style={drawerRoutesstyle.drawerimg}
             />
+            // <Icon name="login" size={25} color='#ba68c8' 
+            // style={drawerRoutesstyle.drawerimg} />
           )
         }}
         component={LoginScreenStack}

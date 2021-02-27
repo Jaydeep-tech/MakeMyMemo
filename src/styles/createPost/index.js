@@ -37,7 +37,7 @@ export const createPoststyle = StyleSheet.create({
         alignSelf: 'center',
       },
       card: {
-        height: moderateScale(680),
+        height: moderateScale(720),
         marginVertical: moderateScale(10), ///Margin between image and card
         flexDirection: 'row',
         shadowColor: colors.customerDetailsCardShadowColors,
@@ -103,7 +103,7 @@ export const createPoststyle = StyleSheet.create({
        
       
       innercard: {
-        height: moderateScale(420),
+        height: moderateScale(450),
         marginVertical: moderateScale(35), ///Margin between image and card
         flexDirection: 'row',
         shadowColor: colors.customerDetailsCardShadowColors,
@@ -195,7 +195,16 @@ export const createPoststyle = StyleSheet.create({
       color:colors.storyTitlecolors,
       marginVertical:moderateScale(20)
     },
+    StoryTitle3:{
+      color:colors.storyTitlecolors,
+      marginVertical:moderateScale(20)
+    },
     firsttxt:{
       marginVertical:moderateScale(-8)
+    },
+    btnfileupload:{
+      borderWidth: moderateScale(0.5), 
+      color: colors.CreatePostbtnFileUploadColors, 
+      height: moderateScale(25)
     }
 });

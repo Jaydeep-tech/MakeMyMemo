@@ -130,5 +130,14 @@ export default AppString = {
   RegisterlblMobileNo:"Mobile Number",
   RegisterlblPassword:"Password*",
 
+  EditProfileBottomSheetTitle1:"Upload Photo",
+  EditProfileBottomSheetTitle2:"Choose Your Profile Picture",
+  EditProfileBottomSheetTitle3:"Take Photo",
+  EditProfileBottomSheetTitle4:"Choose From Gallery",
+  EditProfileBottomSheetTitle5:"Cancel",
+  CreatePostbtnFileUploadTitle:"Choose File",
+
+
+
   
 };
