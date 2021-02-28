@@ -6,8 +6,8 @@ export const drawerRoutesstyle = StyleSheet.create({
     
     drawerimg: 
     {
-      width: moderateScale(20),
-      height: moderateScale(20) 
+      // width: moderateScale(20),
+      // height: moderateScale(20) 
     },
     
 });

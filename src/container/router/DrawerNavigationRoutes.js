@@ -185,14 +185,14 @@ const DrawerNavigatorRoutes = (props) => {
           drawerLabel: strings.homeTitle,
           drawerIcon: ({ tintColor }) => (
             
-            <Image
-              source={images.homeslidemenu}
-              resizeMode="contain"
-              // style={{ width: 20, height: 20, tintColor: tintColor }}
-              style={drawerRoutesstyle.drawerimg}
-            />
-            // <Icon name="home" size={25} color='#ba68c8' 
-            // style={drawerRoutesstyle.drawerimg} />
+            // <Image
+            //   source={images.homeslidemenu}
+            //   resizeMode="contain"
+            //   // style={{ width: 20, height: 20, tintColor: tintColor }}
+            //   style={drawerRoutesstyle.drawerimg}
+            // />
+            <Icon name="home" size={25} color='#ba68c8' 
+            style={drawerRoutesstyle.drawerimg} />
           )
         }}
         component={HomeScreenStack}
@@ -204,13 +204,13 @@ const DrawerNavigatorRoutes = (props) => {
           drawerLabel: strings.aboutTitle,
           drawerIcon: ({ tintColor }) => (
 
-            <Image
-              source={images.aboutslidemenu}
-              resizeMode="contain"
-              style={drawerRoutesstyle.drawerimg}
-            />
-            // <Icon name="information" size={25} color='#ba68c8' 
-            // style={drawerRoutesstyle.drawerimg} />
+            // <Image
+            //   source={images.aboutslidemenu}
+            //   resizeMode="contain"
+            //   style={drawerRoutesstyle.drawerimg}
+            // />
+            <Icon name="information" size={25} color='#ba68c8' 
+            style={drawerRoutesstyle.drawerimg} />
           )
         }}
         component={AboutScreenStack}
@@ -222,14 +222,14 @@ const DrawerNavigatorRoutes = (props) => {
           drawerLabel: strings.profileTitle,
           drawerIcon: ({ tintColor }) => (
 
-            <Image
-              source={images.profileslidemenu}
-              resizeMode="contain"
-              style={drawerRoutesstyle.drawerimg}
-            />
+            // <Image
+            //   source={images.profileslidemenu}
+            //   resizeMode="contain"
+            //   style={drawerRoutesstyle.drawerimg}
+            // />
 
-            // <Icon name="people" size={25} color='#ba68c8' 
-            // style={drawerRoutesstyle.drawerimg} />
+            <Icon name="account-box" size={25} color='#ba68c8' 
+            style={drawerRoutesstyle.drawerimg} />
           )
         }}
         component={ProfileScreenStack}
@@ -241,13 +241,13 @@ const DrawerNavigatorRoutes = (props) => {
         options={{
           drawerLabel: strings.settingTitle, drawerIcon: ({ tintColor }) => (
 
-            <Image
-              source={images.settingsslidemenu}
-              resizeMode="contain"
-              style={drawerRoutesstyle.drawerimg}
-            />
-            // <Icon name="settings" size={25} color='#ba68c8' 
-            // style={drawerRoutesstyle.drawerimg} />
+            // <Image
+            //   source={images.settingsslidemenu}
+            //   resizeMode="contain"
+            //   style={drawerRoutesstyle.drawerimg}
+            // />
+            <Icon name="upload" size={25} color='#ba68c8' 
+            style={drawerRoutesstyle.drawerimg} />
           )
         }}
         component={SettingScreenStack}
@@ -259,13 +259,13 @@ const DrawerNavigatorRoutes = (props) => {
         options={{
           drawerLabel: strings.contactTitle, drawerIcon: ({ tintColor }) => (
 
-            <Image
-              source={images.contactslidemenu}
-              resizeMode="contain"
-              style={drawerRoutesstyle.drawerimg}
-            />
-            // <Icon name="phone-portrait" size={25} color='#ba68c8' 
-            // style={drawerRoutesstyle.drawerimg} />
+            // <Image
+            //   source={images.contactslidemenu}
+            //   resizeMode="contain"
+            //   style={drawerRoutesstyle.drawerimg}
+            // />
+            <Icon name="phone" size={25} color='#ba68c8' 
+            style={drawerRoutesstyle.drawerimg} />
           )
         }}
         component={ContactScreenStack}
@@ -276,13 +276,13 @@ const DrawerNavigatorRoutes = (props) => {
         options={{
           drawerLabel: strings.loginTitle, drawerIcon: ({ tintColor }) => (
 
-            <Image
-              source={images.contactslidemenu}
-              resizeMode="contain"
-              style={drawerRoutesstyle.drawerimg}
-            />
-            // <Icon name="login" size={25} color='#ba68c8' 
-            // style={drawerRoutesstyle.drawerimg} />
+            // <Image
+            //   source={images.contactslidemenu}
+            //   resizeMode="contain"
+            //   style={drawerRoutesstyle.drawerimg}
+            // />
+            <Icon name="login-variant" size={25} color='#ba68c8' 
+            style={drawerRoutesstyle.drawerimg} />
           )
         }}
         component={LoginScreenStack}

@@ -62,22 +62,30 @@ export default class MainScreen extends Component {
 
             <View style={templatestyle.tmpl}>
               <TouchableOpacity style={templatestyle.btnicon}>
-                <Image
+                {/* <Image
                   style={templatestyle.heartshare}
                   source={images.like}
-                /> 
+                />  */}
+                 <Icon name="heart" size={25} color={colors.templatecardiconColors} 
+                  style={templatestyle.heartshare} />
+
+                
               </TouchableOpacity>
               <TouchableOpacity style={templatestyle.btnicon}>
-                <Image
+                {/* <Image
                   style={templatestyle.heartshare}
                   source={images.share}
-                />
+                /> */}
+                 <Icon name="source-fork"  size={25} color={colors.templatecardiconColors} 
+                  style={templatestyle.heartshare} />
               </TouchableOpacity>
               <TouchableOpacity style={templatestyle.btnicon} onPress={() => this.props.navigation.navigate('CutomerDetails')}>
-                <Image
+                {/* <Image
                   style={templatestyle.eyeImgView}
                   source={images.view}
-                />
+                /> */}
+                 <Icon name="eye" size={25} color={colors.templatecardiconColors}  
+                  style={templatestyle.heartshare} />
               </TouchableOpacity>
             </View>
           </View>

@@ -74,8 +74,8 @@ export const templatestyle = StyleSheet.create({
       },
     
       heartshare: {
-        height: moderateScale(20),
-        width: moderateScale(20),
+        // height: moderateScale(20),
+        // width: moderateScale(20),
         resizeMode: "contain"
       },
     
@@ -86,8 +86,8 @@ export const templatestyle = StyleSheet.create({
         marginVertical: moderateScale(-4),
       },
       btnicon: {
-        padding: moderateScale(15),
-        marginHorizontal: moderateScale(5),
+        padding: moderateScale(17),
+        //marginHorizontal: moderateScale(5),
       },
       tmpl:{
         flexDirection: "row", 

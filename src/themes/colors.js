@@ -124,6 +124,7 @@ const colors = {
     "EditProfileBottomSheetaAllPanelColors":"#003470",
     "EditProfileBottomSheetpanelButtonTitleColors":"white",
     "CreatePostbtnFileUploadColors":"grey",
+    "templatecardiconColors":"#ba68c8",
 
 
 };
