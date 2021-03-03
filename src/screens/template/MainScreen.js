@@ -5,7 +5,8 @@ import {
   FlatList,
   Image,
   TouchableOpacity,
-  SafeAreaView
+  SafeAreaView,
+  Share
 } from 'react-native';
 import { images, colors } from '../../themes'
 import { templatestyle } from '../../styles'
@@ -30,6 +31,26 @@ export default class MainScreen extends Component {
     };
   }
 
+  onShare() {
+    try {
+      const result = Share.share({
+        title: 'App Title',
+        message: 'Message'
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          console.log('shared with activity type of result.activityType')
+        }
+        else if (result.action === Share.dismissedAction) {
+          console.log('dismissed')
+        }
+      }
+    }
+    catch (error) {
+      alert(error.message);
+    }
+  };
+
   componentDidMount() {
     this.makeRemoteRequest();
   }
@@ -52,8 +73,8 @@ export default class MainScreen extends Component {
         this.setState({ error, loading: false });
       });
   };
-  
-  
+
+
   // _ifLiked = () => { 
   //   this.setState({
   //     likedQ: true, 
@@ -69,25 +90,25 @@ export default class MainScreen extends Component {
   //      this.setState({myColor: '#ba68c8'});
   //   }
   // }
-  
+
   handleToggleSelect = (item) => {
     const { setMenuIsSelect } = this.props;
-    alert(item.id)
+    // alert(item.id)
     this.setState({
-        menuIsSelect: !this.state.menuIsSelect
+      menuIsSelect: !this.state.menuIsSelect
     }, () => {
-        this.state.menuIsSelect ? item : null;
+      this.state.menuIsSelect ? item : null;
     });
   }
 
-   
 
-  renderRow = (item,index ) => {
-    const {menuIsSelect} = this.state;
-    const {menu} = this.props;
-    console.log(item.id);
+
+  renderRow = (item, index) => {
+    const { menuIsSelect } = this.state;
+    const { menu } = this.props;
+    // console.log(item.id);
     return (
-      
+
       <View style={templatestyle.cardsWrapper}>
         <View style={templatestyle.card}>
           <View style={templatestyle.cardImgWrapper}>
@@ -103,22 +124,22 @@ export default class MainScreen extends Component {
                   style={templatestyle.heartshare}
                   source={images.like}
                 />  */}
-                 <Icon name="heart" size={25} color = {menuIsSelect ? 'red' : colors.templatecardiconColors} 
-                  style={templatestyle.heartshare} onPress = {() => this.handleToggleSelect(item.id)}  />
+                <Icon name="heart" size={25} color={menuIsSelect ? 'red' : colors.templatecardiconColors}
+                  style={templatestyle.heartshare} onPress={() => this.handleToggleSelect(item.id)} />
 
                 {/* <TouchableOpacity onPress={() => this._ifLiked()}> 
                     <Image style={{width: 20 , height: 20}} source={this.state.uri} /> 
                 </TouchableOpacity>  color={this.state.myColor}  onPress={() => this.handleClick()} 
                 onPress = {() => this.handleToggleSelect({ item })} */}
 
-                
+
               </TouchableOpacity>
-              <TouchableOpacity style={templatestyle.btnicon}>
+              <TouchableOpacity style={templatestyle.btnicon} onPress={() => { this.onShare() }}>
                 {/* <Image
                   style={templatestyle.heartshare}
                   source={images.share}
                 /> */}
-                 <Icon name="source-fork"  size={25} color={colors.templatecardiconColors} 
+                <Icon name="source-fork" size={25} color={colors.templatecardiconColors}
                   style={templatestyle.heartshare} />
               </TouchableOpacity>
               <TouchableOpacity style={templatestyle.btnicon} onPress={() => this.props.navigation.navigate('CutomerDetails')}>
@@ -126,23 +147,23 @@ export default class MainScreen extends Component {
                   style={templatestyle.eyeImgView}
                   source={images.view}
                 /> */}
-                 <Icon name="eye" size={25} color={colors.templatecardiconColors}  
+                <Icon name="eye" size={25} color={colors.templatecardiconColors}
                   style={templatestyle.heartshare} />
               </TouchableOpacity>
             </View>
           </View>
         </View>
       </View>
-      
+
     );
   }
-  
+
   render() {
     return (
       <SafeAreaView style={templatestyle.container}>
         <View style={templatestyle.container}>
-       
-          <FlatList  style={templatestyle.container}
+
+          <FlatList style={templatestyle.container}
             data={this.state.data}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
@@ -150,11 +171,11 @@ export default class MainScreen extends Component {
             )}
           />
           <TouchableOpacity onPress={() => this.props.navigation.navigate('Createpost')}
-           style={templatestyle.tmpbtn}>
-          <View>
-            <Icon name="pencil-outline" size={25} color={colors.templatebtniconColors} style={templatestyle.tmplbtncon} />
-          </View>
-        </TouchableOpacity>
+            style={templatestyle.tmpbtn}>
+            <View>
+              <Icon name="pencil-outline" size={25} color={colors.templatebtniconColors} style={templatestyle.tmplbtncon} />
+            </View>
+          </TouchableOpacity>
         </View>
       </SafeAreaView>
     );
