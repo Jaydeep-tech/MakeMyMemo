@@ -114,7 +114,33 @@ export const templatestyle = StyleSheet.create({
       {
         alignSelf:'center',
         marginVertical:moderateScale(15)
-      }
+      },
+      Modaltxt:{
+        fontSize: 17,
+        fontWeight:'bold',
+        color:'#800000',
+        padding:1,
+      },
+      app: {
+        //...StyleSheet.absoluteFillObject,
+        alignItems: 'center',
+        justifyContent: 'center',
+        
+        //backgroundColor: '#c2ffd2',
+      },
+      content: {
+        padding: moderateScale(16),
+        backgroundColor: colors.ModalcontentColors,
+        borderRadius: 8,
+      },
+      arrow: {
+        borderTopColor: colors.ModalarrowColors,
+      },
+      background: {
+        //backgroundColor: 'rgba(0, 0, 255, 0.5)'
+        backgroundColor: 'rgba(0, 0, 0, 0.7)'
+      },
+
 
       // actionButtonIcon: {
       

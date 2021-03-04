@@ -136,6 +136,9 @@ export default AppString = {
   EditProfileBottomSheetTitle4:"Choose From Gallery",
   EditProfileBottomSheetTitle5:"Cancel",
   CreatePostbtnFileUploadTitle:"Choose File",
+  ModalFirsttxtTitle:"Create New Post Story",
+  ModalSecondtxtTitle:"Second Option",
+  ModalThirdtxtTitle:"Third Option",
 
 
 

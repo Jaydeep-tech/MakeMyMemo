@@ -126,6 +126,9 @@ const colors = {
     "CreatePostbtnFileUploadColors":"grey",
     "templatecardiconColors":"#ba68c8",
 
+    "ModalcontentColors":"pink",
+    "ModalarrowColors":"pink",
+
 
 };
 export default colors;

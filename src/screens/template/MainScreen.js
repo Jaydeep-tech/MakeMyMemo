@@ -8,10 +8,12 @@ import {
   SafeAreaView,
   Share
 } from 'react-native';
-import { images, colors } from '../../themes'
+import { images, colors,strings } from '../../themes'
 import { templatestyle } from '../../styles'
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Popover, PopoverController } from 'react-native-modal-popover';
+
 export default class MainScreen extends Component {
   constructor(props) {
     super(props);
@@ -170,12 +172,44 @@ export default class MainScreen extends Component {
               this.renderRow(item)
             )}
           />
-          <TouchableOpacity onPress={() => this.props.navigation.navigate('Createpost')}
+
+          <View style={templatestyle.app}>
+            <PopoverController>
+              {({ openPopover, closePopover, popoverVisible, setPopoverAnchor, popoverAnchorRect }) => (
+                <React.Fragment>
+
+                  <TouchableOpacity ref={setPopoverAnchor} onPress={openPopover}
+                    style={templatestyle.tmpbtn}>
+                    <View>
+                      <Icon name="pencil-outline" size={25} color={colors.templatebtniconColors} style={templatestyle.tmplbtncon} />
+                    </View>
+                  </TouchableOpacity>
+                  <Popover
+                    contentStyle={templatestyle.content}
+                    arrowStyle={templatestyle.arrow}
+                    backgroundStyle={templatestyle.background}
+                    visible={popoverVisible}
+                    onClose={closePopover}
+                    fromRect={popoverAnchorRect}
+                    supportedOrientations={['portrait', 'landscape']}>
+
+                    <TouchableOpacity onPressOut={closePopover} onPress={() => { this.props.navigation.navigate('Createpost') }}>
+                      <Text style={templatestyle.Modaltxt}>{strings.ModalFirsttxtTitle}</Text>
+                    </TouchableOpacity>
+                    <Text style={templatestyle.Modaltxt}>{strings.ModalSecondtxtTitle}</Text>
+                    <Text style={templatestyle.Modaltxt}>{strings.ModalThirdtxtTitle}</Text>
+
+                  </Popover>
+                </React.Fragment>
+              )}
+            </PopoverController>
+          </View>
+          {/* <TouchableOpacity onPress={() => this.props.navigation.navigate('Createpost')}
             style={templatestyle.tmpbtn}>
             <View>
               <Icon name="pencil-outline" size={25} color={colors.templatebtniconColors} style={templatestyle.tmplbtncon} />
             </View>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
       </SafeAreaView>
     );
