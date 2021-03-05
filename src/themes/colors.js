@@ -128,7 +128,10 @@ const colors = {
 
     "ModalcontentColors":"pink",
     "ModalarrowColors":"pink",
-
+    "FilterIcnColors":"white",
+    "AllDrawerIconColors":"ba68c8",
+    "ModaltxtColors":"white",
+    "ModalBtnlColors":"#003470",
 
 };
 export default colors;

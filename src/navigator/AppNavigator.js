@@ -1,6 +1,6 @@
 // Import React and Component
 import React from 'react';
-import { View, Text, Alert, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Alert, StyleSheet, Image, TouchableOpacity,Share } from 'react-native';
 // Import Navigators from React Navigation
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -15,10 +15,32 @@ import Register from '../container/Drawer/Register';
 import DrawerNavigationRoutes from '../container/router/DrawerNavigationRoutes';
 import { strings, colors, images } from '../themes';
 import { customerDetailstyle } from '../styles';
-
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 const Stack = createStackNavigator();
 
 const AppNavigator = (props) => {
+
+  function onShare()  {
+    try {
+      const result = Share.share({
+        title: 'App Title',
+        message: 'Message'
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          console.log('shared with activity type of result.activityType')
+        }
+        else if (result.action === Share.dismissedAction) {
+          console.log('dismissed')
+        }
+      }
+    }
+    catch (error) {
+      alert(error.message);
+    }
+  }
+
+
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="SplashScreen">
@@ -52,6 +74,12 @@ const AppNavigator = (props) => {
           name="MainScreen"
           component={MainScreen}
           options={{title: strings.TemplateTitle, headerTitleStyle: {fontWeight: 'bold'},
+          headerRight: () => (
+            <View>
+               <Icon name="filter-outline" size={25} color={colors.FilterIcnColors}
+                style={customerDetailstyle.FilterIcon} />
+            </View>
+          ),
           headerStyle: { backgroundColor: colors.headerstylebgColor }, headerTintColor: colors.drawerheaderTintColor,}}
         />
 
@@ -84,7 +112,7 @@ const AppNavigator = (props) => {
                     style={customerDetailstyle.headerLeftimg}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => onShare() }>
                   <Image
                     source={images.sharenew}
                     style={customerDetailstyle.headerRightimg}

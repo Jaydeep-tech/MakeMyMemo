@@ -191,7 +191,7 @@ const DrawerNavigatorRoutes = (props) => {
             //   // style={{ width: 20, height: 20, tintColor: tintColor }}
             //   style={drawerRoutesstyle.drawerimg}
             // />
-            <Icon name="home" size={25} color='#ba68c8' 
+            <Icon name="home" size={25} color={colors.AllDrawerIconColors}
             style={drawerRoutesstyle.drawerimg} />
           )
         }}
@@ -209,7 +209,7 @@ const DrawerNavigatorRoutes = (props) => {
             //   resizeMode="contain"
             //   style={drawerRoutesstyle.drawerimg}
             // />
-            <Icon name="information" size={25} color='#ba68c8' 
+            <Icon name="information" size={25} color={colors.AllDrawerIconColors}
             style={drawerRoutesstyle.drawerimg} />
           )
         }}
@@ -228,7 +228,7 @@ const DrawerNavigatorRoutes = (props) => {
             //   style={drawerRoutesstyle.drawerimg}
             // />
 
-            <Icon name="account-box" size={25} color='#ba68c8' 
+            <Icon name="account-box" size={25} color={colors.AllDrawerIconColors} 
             style={drawerRoutesstyle.drawerimg} />
           )
         }}
@@ -246,7 +246,7 @@ const DrawerNavigatorRoutes = (props) => {
             //   resizeMode="contain"
             //   style={drawerRoutesstyle.drawerimg}
             // />
-            <Icon name="upload" size={25} color='#ba68c8' 
+            <Icon name="upload" size={25} color={colors.AllDrawerIconColors} 
             style={drawerRoutesstyle.drawerimg} />
           )
         }}
@@ -264,7 +264,7 @@ const DrawerNavigatorRoutes = (props) => {
             //   resizeMode="contain"
             //   style={drawerRoutesstyle.drawerimg}
             // />
-            <Icon name="phone" size={25} color='#ba68c8' 
+            <Icon name="phone" size={25} color={colors.AllDrawerIconColors} 
             style={drawerRoutesstyle.drawerimg} />
           )
         }}
@@ -281,7 +281,7 @@ const DrawerNavigatorRoutes = (props) => {
             //   resizeMode="contain"
             //   style={drawerRoutesstyle.drawerimg}
             // />
-            <Icon name="login-variant" size={25} color='#ba68c8' 
+            <Icon name="login-variant" size={25} color={colors.AllDrawerIconColors} 
             style={drawerRoutesstyle.drawerimg} />
           )
         }}

@@ -190,5 +190,11 @@ export const customerDetailstyle = StyleSheet.create({
         alignSelf: 'center',
         marginTop:moderateScale(-55) 
       },    
-      
+      FilterIcon:
+      {
+        right:moderateScale(20),
+        top:moderateScale(2),
+        
+      }
+
 });

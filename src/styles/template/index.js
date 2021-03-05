@@ -116,16 +116,17 @@ export const templatestyle = StyleSheet.create({
         marginVertical:moderateScale(15)
       },
       Modaltxt:{
-        fontSize: 17,
+        fontSize: 15,
         fontWeight:'bold',
-        color:'#800000',
+        //color:'#800000',
+        color:colors.ModaltxtColors,
         padding:1,
       },
       app: {
         //...StyleSheet.absoluteFillObject,
         alignItems: 'center',
         justifyContent: 'center',
-        
+        //marginBottom:10
         //backgroundColor: '#c2ffd2',
       },
       content: {
@@ -140,7 +141,20 @@ export const templatestyle = StyleSheet.create({
         //backgroundColor: 'rgba(0, 0, 255, 0.5)'
         backgroundColor: 'rgba(0, 0, 0, 0.7)'
       },
-
+      ModalFirstBtn:{
+        backgroundColor: colors.ModalBtnlColors,
+        borderRadius: 10,
+        padding: moderateScale(5),
+        alignItems: 'center',
+      },
+      ModalSecondThirdBtn:{
+        backgroundColor: colors.ModalBtnlColors,
+        borderRadius: 10,
+        padding: moderateScale(5),
+        marginTop:moderateScale(5), 
+        alignItems: 'center',
+      }
+     
 
       // actionButtonIcon: {
       

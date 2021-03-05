@@ -193,11 +193,15 @@ export default class MainScreen extends Component {
                     fromRect={popoverAnchorRect}
                     supportedOrientations={['portrait', 'landscape']}>
 
-                    <TouchableOpacity onPressOut={closePopover} onPress={() => { this.props.navigation.navigate('Createpost') }}>
+                    <TouchableOpacity style={templatestyle.ModalFirstBtn} onPressOut={closePopover} onPress={() => { this.props.navigation.navigate('Createpost') }}>
                       <Text style={templatestyle.Modaltxt}>{strings.ModalFirsttxtTitle}</Text>
                     </TouchableOpacity>
-                    <Text style={templatestyle.Modaltxt}>{strings.ModalSecondtxtTitle}</Text>
-                    <Text style={templatestyle.Modaltxt}>{strings.ModalThirdtxtTitle}</Text>
+                    <TouchableOpacity style={templatestyle.ModalSecondThirdBtn} onPressOut={closePopover} onPress={() => { this.props.navigation.navigate('Createpost') }}>
+                      <Text style={templatestyle.Modaltxt}>{strings.ModalSecondtxtTitle}</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={templatestyle.ModalSecondThirdBtn} onPressOut={closePopover} onPress={() => { this.props.navigation.navigate('Createpost') }}>
+                      <Text style={templatestyle.Modaltxt}>{strings.ModalThirdtxtTitle}</Text>
+                    </TouchableOpacity>
 
                   </Popover>
                 </React.Fragment>
