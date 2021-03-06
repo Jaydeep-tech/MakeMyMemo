@@ -132,6 +132,8 @@ const colors = {
     "AllDrawerIconColors":"ba68c8",
     "ModaltxtColors":"white",
     "ModalBtnlColors":"#003470",
+    "FilterIconColors":"white",
+    "heartIconRedColors":"red",
 
 };
 export default colors;

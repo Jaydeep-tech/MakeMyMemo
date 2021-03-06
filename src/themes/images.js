@@ -28,6 +28,7 @@ export default AppImages = {
   "ProfileIcon": require('../assets/images/customers/Profile.png'),
   "ProfilebtnIcon": require('../assets/images/customers/btnCamera.png'),
   "SchoolTech": require('../assets/images/customers/schooltech.png'),
+  "FilterIcon": require('../assets/images/customers/filter.png'),
   
     
 };

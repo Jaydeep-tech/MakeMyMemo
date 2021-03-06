@@ -73,11 +73,11 @@ export const templatestyle = StyleSheet.create({
         alignItems: "center"
       },
     
-      heartshare: {
-        // height: moderateScale(20),
-        // width: moderateScale(20),
-        resizeMode: "contain"
-      },
+      // heartshare: {
+      //   // height: moderateScale(20),
+      //   // width: moderateScale(20),
+      //   //resizeMode: "contain"
+      // },
     
       eyeImgView: {
         height: moderateScale(30),
@@ -86,12 +86,12 @@ export const templatestyle = StyleSheet.create({
         marginVertical: moderateScale(-4),
       },
       btnicon: {
-        padding: moderateScale(17),
+        padding: moderateScale(20),
         //marginHorizontal: moderateScale(5),
       },
       tmpl:{
         flexDirection: "row", 
-        padding: moderateScale(30) 
+        //padding: moderateScale(30) 
       },
 
       actionButtonIcon: {

@@ -76,8 +76,13 @@ const AppNavigator = (props) => {
           options={{title: strings.TemplateTitle, headerTitleStyle: {fontWeight: 'bold'},
           headerRight: () => (
             <View>
-               <Icon name="filter-outline" size={25} color={colors.FilterIcnColors}
-                style={customerDetailstyle.FilterIcon} />
+               {/* <Icon name="filter-outline" size={25} color={colors.FilterIcnColors}
+                style={customerDetailstyle.FilterIcon} /> */}
+
+                  <Image
+                    source={images.FilterIcon}
+                    style={customerDetailstyle.FilterIcon}
+                  />
             </View>
           ),
           headerStyle: { backgroundColor: colors.headerstylebgColor }, headerTintColor: colors.drawerheaderTintColor,}}

@@ -193,8 +193,8 @@ export const customerDetailstyle = StyleSheet.create({
       FilterIcon:
       {
         right:moderateScale(20),
-        top:moderateScale(2),
-        
+        top:moderateScale(4),
+        tintColor: colors.FilterIconColors,
       }
 
 });
