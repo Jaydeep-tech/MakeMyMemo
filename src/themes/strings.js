@@ -140,6 +140,12 @@ export default AppString = {
   ModalSecondtxtTitle:"Second Option",
   ModalThirdtxtTitle:"Third Option",
 
+  CustDetailsLikeTitle:"Like",
+  CustDetailsCommentTitle:"Comment",
+  CustDetailsShareTitle:"Share",
+
+
+
 
 
   

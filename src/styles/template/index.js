@@ -91,6 +91,7 @@ export const templatestyle = StyleSheet.create({
       },
       tmpl:{
         flexDirection: "row", 
+        marginTop:moderateScale(-5),
         //padding: moderateScale(30) 
       },
 

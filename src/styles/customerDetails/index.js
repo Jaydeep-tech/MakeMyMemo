@@ -195,6 +195,47 @@ export const customerDetailstyle = StyleSheet.create({
         right:moderateScale(20),
         top:moderateScale(4),
         tintColor: colors.FilterIconColors,
+      },
+      profileHeaderLine: {
+        height: moderateScale(1),
+        marginHorizontal: moderateScale(5),
+        backgroundColor: colors.csmprofileHeaderLinecolors,
+        marginTop: moderateScale(5),
+      },
+      profileHeaderLine2: {
+        height: moderateScale(1),
+        marginHorizontal: moderateScale(5),
+        backgroundColor: colors.csmprofileHeaderLinecolors,
+        marginTop: moderateScale(-15),
+      },
+      IconRow:{
+        marginTop: moderateScale(-45), 
+        right: moderateScale(20), 
+        flexDirection: 'row',
+      },
+      InnerIconRow:{
+        padding: moderateScale(50),
+      },
+      IconTxtRow:{
+        marginTop: moderateScale(-75), 
+        right: moderateScale(20), 
+        flexDirection: 'row',
+      },
+      InnerIconFirstTxtRow:{
+        padding: moderateScale(20), 
+        left: moderateScale(30),
+      },
+      InnerIconSecondTxtRow:{
+        padding: moderateScale(20), 
+        left: moderateScale(70),
+      },
+      InnerIconThirdTxtRow:{
+        padding: moderateScale(20), 
+        left: moderateScale(107),
+      },
+      IconAllTxt:{
+        color: colors.CustDetailsAllIconTextColors, 
+        paddingTop: moderateScale(3),
       }
 
 });

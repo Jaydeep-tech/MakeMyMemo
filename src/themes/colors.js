@@ -134,6 +134,9 @@ const colors = {
     "ModalBtnlColors":"#003470",
     "FilterIconColors":"white",
     "heartIconRedColors":"red",
+    "CustDetailsIconRedColors":"red",
+    "CustDetailsIcongreyColors":"grey",
+    "CustDetailsAllIconTextColors":"black",
 
 };
 export default colors;

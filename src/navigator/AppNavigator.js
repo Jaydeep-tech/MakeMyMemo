@@ -111,18 +111,18 @@ const AppNavigator = (props) => {
             // ),
             headerRight: () => (
               <View style={customerDetailstyle.haderrow}>
-                <TouchableOpacity>
+                {/* <TouchableOpacity>
                   <Image
                     source={images.likenew}
                     style={customerDetailstyle.headerLeftimg}
                   />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => onShare() }>
+                </TouchableOpacity> */}
+                {/* <TouchableOpacity onPress={() => onShare() }>
                   <Image
                     source={images.sharenew}
                     style={customerDetailstyle.headerRightimg}
                   />
-                </TouchableOpacity>
+                </TouchableOpacity> */}
               </View>
             ),
             headerStyle: { backgroundColor: colors.customerDetailsHaderColors, shadowColor: '#fff', elevation: 0.5 }, headerTintColor: colors.customerDetailsHaderTintColor
