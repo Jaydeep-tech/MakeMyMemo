@@ -138,5 +138,18 @@ const colors = {
     "CustDetailsIcongreyColors":"grey",
     "CustDetailsAllIconTextColors":"black",
 
+    "CommentrightContentColors":"#f1f3f6",
+    "CommenttimeColors":"#9B9B9B",
+    "CommentactionTextColors":"#9B9B9B",
+    "CommentrepliedUsernameColors":"#9B9B9B",
+    "CommentrepliedTextColors":"#9B9B9B",
+    "CommentrepliedCountColors":"#9B9B9B",
+    "CommentinputSectionColors":"#fff",
+    "CommentinputbgColors":"#fff",
+    "CommentinputColors":"#424242",
+    "CommenteditModalColors":"white",
+    "CommenteditModalborderColors":"silver",
+    "CommenteditButtonsborderColors":"silver",
+
 };
 export default colors;

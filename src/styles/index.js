@@ -13,5 +13,6 @@ import { createPoststyle } from './createPost'
 import { ediprofilestyle } from './editProfile'
 import {loginstyle} from './login'
 import {registerstyle} from './register'
+import {commentstyle} from './comment'
 
-export {splashstyle,templatestyle,homestyle,customSidebarMenustyle,drawerRoutesstyle,navigationDrawerstyle,aboutstyle,profilestyle,settingstyle,contactstyle,customerDetailstyle,createPoststyle,ediprofilestyle,loginstyle,registerstyle}
+export {splashstyle,templatestyle,homestyle,customSidebarMenustyle,drawerRoutesstyle,navigationDrawerstyle,aboutstyle,profilestyle,settingstyle,contactstyle,customerDetailstyle,createPoststyle,ediprofilestyle,loginstyle,registerstyle,commentstyle}

@@ -12,6 +12,7 @@ import CutomerDetails from '../screens/customer/CutomerDetails';
 import Createpost from '../screens/createpost/Createpost';
 import EditProfile from '../screens/editprofile/EditProfile';
 import Register from '../container/Drawer/Register';
+import Comment from '../screens/comment/CommentScreen';
 import DrawerNavigationRoutes from '../container/router/DrawerNavigationRoutes';
 import { strings, colors, images } from '../themes';
 import { customerDetailstyle } from '../styles';
@@ -55,6 +56,17 @@ const AppNavigator = (props) => {
         <Stack.Screen
           name="Register"
           component={Register}
+          // Hiding header for Splash Screen
+          options={{ headerShown: false }}
+          // options={{
+          //   title: strings.RegisterHeaderTitle, headerTitleStyle: { fontWeight: 'bold', alignSelf: 'center', marginRight:70},
+          //   headerStyle: { backgroundColor: colors.RegisterHaderbgColors, shadowColor: '#fff', elevation: 0.5 }, headerTintColor: colors.RegisterHaderTintColors
+          // }}
+        />
+
+        <Stack.Screen
+          name="Comment"
+          component={Comment}
           // Hiding header for Splash Screen
           options={{ headerShown: false }}
           // options={{

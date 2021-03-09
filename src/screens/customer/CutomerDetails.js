@@ -4,7 +4,7 @@ import { View, Text, SafeAreaView, TouchableOpacity, Image, Share } from 'react-
 import { customerDetailstyle } from '../../styles';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { images, colors, strings } from '../../themes'
-const CutomerDetails = () => {
+const CutomerDetails = ({ props, navigation }) => {
   const [estado, setEstado] = useState(false);
 
   const agregarFavoritos = () => {
@@ -69,7 +69,7 @@ const CutomerDetails = () => {
               <Icon onPress={() => agregarFavoritos()} name={estado ? 'heart' : 'heart-outline'} size={25} color={estado ? colors.CustDetailsIconRedColors : colors.CustDetailsIcongreyColors} />
             </View>
             <View style={customerDetailstyle.InnerIconRow}>
-              <Icon name='comment-text-outline' size={25} color={colors.CustDetailsIcongreyColors} />
+              <Icon name='comment-text-outline' onPress={() => navigation.navigate('Comment')} size={25} color={colors.CustDetailsIcongreyColors} />
             </View>
             <View style={customerDetailstyle.InnerIconRow}>
               <Icon onPress={() => onShare()} name='source-fork' size={25} color={colors.CustDetailsIcongreyColors} />
